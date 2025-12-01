@@ -51,7 +51,7 @@ export function TestimonialsSection() {
             <Card key={index} className="bg-primary-foreground border-0">
               <CardContent className="p-6">
                 <Quote className="h-8 w-8 text-secondary mb-4" />
-                <p className="text-foreground/80 mb-4 leading-relaxed font-[family-name:var(--font-inter)]">
+                <p className="text-white/90 mb-4 leading-relaxed font-[family-name:var(--font-inter)]">
                   &ldquo;{testimonial.content}&rdquo;
                 </p>
                 <div className="flex gap-1 mb-3">
@@ -60,10 +60,10 @@ export function TestimonialsSection() {
                   ))}
                 </div>
                 <div>
-                  <div className="font-semibold text-foreground font-[family-name:var(--font-inter)]">
+                  <div className="font-semibold text-white font-[family-name:var(--font-inter)]">
                     {testimonial.name}
                   </div>
-                  <div className="text-sm text-muted-foreground font-[family-name:var(--font-inter)]">
+                  <div className="text-sm text-white/70 font-[family-name:var(--font-inter)]">
                     {testimonial.role}
                   </div>
                 </div>
