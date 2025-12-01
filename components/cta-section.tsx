@@ -2,6 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Phone, ArrowRight, Sparkles } from "lucide-react"
+import { getImagePath } from "@/lib/utils"
 
 export function CTASection() {
   return (
@@ -58,7 +59,7 @@ export function CTASection() {
               <div className="relative">
                 <div className="absolute -inset-2 bg-gradient-to-br from-secondary/40 to-secondary/10 rounded-2xl rotate-2" />
                 <Image
-                  src="/happy-family-new-home-keys-handover.jpg"
+                  src={getImagePath("/happy-family-new-home-keys-handover.jpg")}
                   alt="Happy Family with New Home"
                   width={600}
                   height={400}

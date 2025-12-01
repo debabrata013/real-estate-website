@@ -2,6 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Home, Building, MapPin, Key, Sparkles } from "lucide-react"
+import { getImagePath } from "@/lib/utils"
 
 export function HeroSection() {
   return (
@@ -57,7 +58,7 @@ export function HeroSection() {
               <div className="absolute -inset-3 bg-gradient-to-br from-primary via-primary/60 to-primary/30 rounded-3xl rotate-2" />
               <div className="absolute -inset-1 bg-gradient-to-br from-secondary-foreground/20 to-transparent rounded-2xl" />
               <Image
-                src="/luxury-modern-home-exterior-with-beautiful-landsca.jpg"
+                src={getImagePath("/luxury-modern-home-exterior-with-beautiful-landsca.jpg")}
                 alt="Premium Property"
                 width={800}
                 height={600}

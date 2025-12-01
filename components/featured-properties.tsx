@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { MapPin, Bed, Bath, Square, ArrowRight } from "lucide-react"
+import { getImagePath } from "@/lib/utils"
 
 const properties = [
   {
@@ -110,7 +111,7 @@ export function FeaturedProperties() {
             <Card key={property.id} className="group overflow-hidden hover:shadow-xl transition-all border-border">
               <div className="relative overflow-hidden">
                 <Image
-                  src={property.image || "/placeholder.svg"}
+                  src={getImagePath(property.image || "/placeholder.svg")}
                   alt={property.title}
                   width={400}
                   height={300}
