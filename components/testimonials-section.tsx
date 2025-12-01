@@ -37,10 +37,10 @@ export function TestimonialsSection() {
     <section className="py-20 bg-primary">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             What Our <span className="text-secondary">Clients Say</span>
           </h2>
-          <p className="text-primary-foreground/80 max-w-2xl mx-auto font-[family-name:var(--font-inter)]">
+          <p className="text-white/80 max-w-2xl mx-auto font-[family-name:var(--font-inter)]">
             Don&apos;t just take our word for it. Here&apos;s what our satisfied clients have to say about their
             experience with us.
           </p>
