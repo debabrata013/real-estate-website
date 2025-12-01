@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Home, Building, MapPin, Key, Sparkles } from "lucide-react"
 
@@ -55,9 +56,11 @@ export function HeroSection() {
             <div className="relative">
               <div className="absolute -inset-3 bg-gradient-to-br from-primary via-primary/60 to-primary/30 rounded-3xl rotate-2" />
               <div className="absolute -inset-1 bg-gradient-to-br from-secondary-foreground/20 to-transparent rounded-2xl" />
-              <img
+              <Image
                 src="/luxury-modern-home-exterior-with-beautiful-landsca.jpg"
                 alt="Premium Property"
+                width={800}
+                height={600}
                 className="relative rounded-2xl shadow-2xl w-full h-auto border-4 border-secondary-foreground/10"
               />
               <div className="absolute -bottom-4 -left-4 bg-gradient-to-r from-primary to-[oklch(0.65_0.14_75)] text-primary-foreground px-6 py-3 rounded-xl shadow-xl font-semibold">

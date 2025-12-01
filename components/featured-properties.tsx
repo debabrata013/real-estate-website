@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -108,9 +109,11 @@ export function FeaturedProperties() {
           {properties.map((property) => (
             <Card key={property.id} className="group overflow-hidden hover:shadow-xl transition-all border-border">
               <div className="relative overflow-hidden">
-                <img
+                <Image
                   src={property.image || "/placeholder.svg"}
                   alt={property.title}
+                  width={400}
+                  height={300}
                   className="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute top-3 left-3 flex gap-2">
