@@ -6,6 +6,5 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function getImagePath(path: string) {
-  const basePath = "/real-estate-website"
-  return `${basePath}${path.startsWith("/") ? "" : "/"}${path}`
+  return `${path.startsWith("/") ? "" : "/"}${path}`
 }
