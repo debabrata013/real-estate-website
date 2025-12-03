@@ -1,8 +1,9 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { useState } from "react"
-import { Menu, X, Phone, Mail, Building2, MapPin } from "lucide-react"
+import { Menu, X, Phone, Mail, MapPin } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const navigation = [
@@ -47,8 +48,15 @@ export function Header() {
       <nav className="container mx-auto px-4 py-4 border-b border-border/50">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-12 h-12 bg-gradient-to-br from-primary to-[oklch(0.65_0.14_75)] rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow">
-              <Building2 className="h-7 w-7 text-secondary" />
+            <div className="w-12 h-12 bg-gradient-to-br from-primary to-[oklch(0.65_0.14_75)] rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow overflow-hidden">
+              <Image 
+                src="/logo.jpeg" 
+                alt="Shyam Sarkar Real Estate Logo" 
+                width={28}
+                height={28}
+                className="object-contain"
+                priority
+              />
             </div>
             <div>
               <h1 className="text-xl font-bold text-secondary leading-tight font-serif">Shyam Sarkar</h1>
@@ -83,6 +91,7 @@ export function Header() {
             type="button"
             className="lg:hidden p-2 text-secondary"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
           >
             {mobileMenuOpen ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
           </button>

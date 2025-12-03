@@ -4,7 +4,9 @@ import { FloatingButtons } from "@/components/floating-buttons"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { CheckCircle, Target, Heart, Shield, Handshake, ArrowRight, Phone } from "lucide-react"
+import Image from "next/image"
+
+import { CheckCircle, Target, Heart, Shield, Handshake, ArrowRight, Phone, Award, Briefcase } from "lucide-react"
 
 export const metadata = {
   title: "About Us | Shyam Sarkar Real Estate Pvt. Ltd.",
@@ -73,12 +75,105 @@ export default function AboutPage() {
           </div>
         </section>
 
+        {/* Owner Section - NEW */}
+        <section className="py-20 bg-muted">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                  Meet Our <span className="text-secondary">Founder</span>
+                </h2>
+                <p className="text-muted-foreground max-w-2xl mx-auto font-[family-name:var(--font-inter)]">
+                  The visionary leader behind Shyam Sarkar Real Estate's success story
+                </p>
+              </div>
+
+              <Card className="overflow-hidden border-border shadow-xl">
+                <CardContent className="p-0">
+                  <div className="grid md:grid-cols-5 gap-8 items-center">
+                    {/* Owner Image */}
+                    <div className="md:col-span-2 relative h-[400px] md:h-full">
+                      <Image
+                        src="/owner.jpeg"
+                        alt="Ghanshyam Kushwaha - Founder & Director"
+                        fill
+                        className="object-cover"
+                        priority
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                    </div>
+
+                    {/* Owner Details */}
+                    <div className="md:col-span-3 p-8">
+                      <div className="space-y-6">
+                        <div>
+                          <h3 className="text-3xl font-bold text-foreground mb-2">Ghanshyam Kushwaha</h3>
+                          <p className="text-primary font-semibold text-lg">Founder & Director</p>
+                        </div>
+
+                        <div className="h-1 w-20 bg-gradient-to-r from-primary to-secondary rounded-full" />
+
+                        <p className="text-muted-foreground leading-relaxed font-[family-name:var(--font-inter)]">
+                          With over 15 years of experience in the real estate industry, Ghanshyam Kushwaha has
+                          established Shyam Sarkar Real Estate as a trusted name in Jhansi and surrounding regions. His
+                          vision of transparent, client-focused service has helped thousands of families find their
+                          dream properties.
+                        </p>
+
+                        <div className="grid sm:grid-cols-2 gap-4">
+                          <div className="flex items-start gap-3 p-4 bg-background rounded-lg">
+                            <Award className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+                            <div>
+                              <h4 className="font-semibold text-foreground mb-1">Industry Expert</h4>
+                              <p className="text-sm text-muted-foreground font-[family-name:var(--font-inter)]">
+                                15+ years of proven excellence
+                              </p>
+                            </div>
+                          </div>
+                          <div className="flex items-start gap-3 p-4 bg-background rounded-lg">
+                            <Briefcase className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+                            <div>
+                              <h4 className="font-semibold text-foreground mb-1">Client Success</h4>
+                              <p className="text-sm text-muted-foreground font-[family-name:var(--font-inter)]">
+                                1000+ satisfied clients
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <blockquote className="border-l-4 border-primary pl-4 italic text-muted-foreground">
+                          "Our mission is simple - to make every property transaction a smooth and rewarding experience
+                          for our clients."
+                        </blockquote>
+
+                        <div className="pt-4">
+                          <Button asChild className="bg-primary hover:bg-primary/90">
+                            <a href="tel:+917985206466">
+                              <Phone className="mr-2 h-4 w-4" />
+                              Connect with Ghanshyam
+                            </a>
+                          </Button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
         {/* Our Story Section */}
         <section className="py-20 bg-background">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <img src="/professional-real-estate-office-team-meeting.jpg" alt="Our Team" className="rounded-2xl shadow-lg w-full h-auto" />
+              <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-lg">
+                <Image
+                  src="/professional-real-estate-office-team-meeting.jpg"
+                  alt="Our Team"
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
@@ -99,17 +194,6 @@ export default function AboutPage() {
                     home, a space to build your business, or land to secure your future. That&apos;s why we treat every
                     client&apos;s needs as our own.
                   </p>
-                </div>
-                <div className="mt-8 p-6 bg-muted rounded-xl">
-                  <div className="flex items-center gap-4">
-                    <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center">
-                      <span className="text-2xl font-bold text-secondary">GK</span>
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-bold text-foreground">Ghanshyam Kushwaha</h3>
-                      <p className="text-muted-foreground font-[family-name:var(--font-inter)]">Founder & Director</p>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -181,11 +265,12 @@ export default function AboutPage() {
                   ))}
                 </div>
               </div>
-              <div>
-                <img
+              <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-lg">
+                <Image
                   src="/real-estate-agent-showing-property-to-happy-client.jpg"
                   alt="Our Services"
-                  className="rounded-2xl shadow-lg w-full h-auto"
+                  fill
+                  className="object-cover"
                 />
               </div>
             </div>
