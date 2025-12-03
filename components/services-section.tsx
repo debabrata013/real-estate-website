@@ -77,6 +77,62 @@ export function ServicesSection() {
             </Card>
           ))}
         </div>
+
+        {/* Video Showcase Section */}
+        <div className="mt-20">
+          <div className="text-center mb-12">
+            <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4 font-serif">
+              Explore Our <span className="text-primary">Properties</span>
+            </h3>
+            <p className="text-muted-foreground max-w-xl mx-auto">
+              Take a virtual tour of our premium properties and see what makes us the trusted choice in Jhansi.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {/* Video 1 */}
+            <div className="group relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 bg-background border border-border">
+              <div className="aspect-video relative overflow-hidden">
+                <video
+                  className="w-full h-full object-cover"
+                  controls
+                  preload="metadata"
+                  poster="/video1-thumbnail.jpg"
+                >
+                  <source src="/video1.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div className="p-6">
+                <h4 className="text-lg font-semibold text-foreground mb-2">Property Showcase</h4>
+                <p className="text-sm text-muted-foreground">
+                  Discover our curated collection of premium residential and commercial properties.
+                </p>
+              </div>
+            </div>
+
+            {/* Video 2 */}
+            <div className="group relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 bg-background border border-border">
+              <div className="aspect-video relative overflow-hidden">
+                <video
+                  className="w-full h-full object-cover"
+                  controls
+                  preload="metadata"
+                  poster="/video2-thumbnail.jpg"
+                >
+                  <source src="/video2.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div className="p-6">
+                <h4 className="text-lg font-semibold text-foreground mb-2">Properties Visualization</h4>
+                <p className="text-sm text-muted-foreground">
+                  Hear from our satisfied clients about their property journey with us.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   )
