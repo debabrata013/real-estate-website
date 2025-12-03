@@ -50,7 +50,7 @@ export function Header() {
           <Link href="/" className="flex items-center gap-3 group">
             <div className="w-12 h-12 bg-gradient-to-br from-primary to-[oklch(0.65_0.14_75)] rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow overflow-hidden">
               <Image 
-                src="/logo.jpeg" 
+                src="/logo.png" 
                 alt="Shyam Sarkar Real Estate Logo" 
                 width={28}
                 height={28}
