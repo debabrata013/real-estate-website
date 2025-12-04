@@ -1,6 +1,6 @@
 import { Home, Building2, MapPin, Key, TrendingUp, FileText } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { getImagePath } from "@/lib/utils"
+import { getAssetPath } from "@/lib/utils"
 
 const services = [
   {
@@ -100,7 +100,7 @@ export function ServicesSection() {
                   preload="metadata"
                   poster="/video1-thumbnail.jpg"
                 >
-                  <source src={getImagePath("/video1.mp4")} type="video/mp4" />
+                  <source src={getAssetPath("/video1.mp4")} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
@@ -121,7 +121,7 @@ export function ServicesSection() {
                   preload="metadata"
                   poster="/video2-thumbnail.jpg"
                 >
-                  <source src={getImagePath("/video2.mp4")} type="video/mp4" />
+                  <source src={getAssetPath("/video2.mp4")} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
