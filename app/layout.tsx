@@ -17,7 +17,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://debabrata013.github.io/real-estate-website"),
+  metadataBase: new URL("https://shyamsarkarrealestate.com"),
   title: {
     default: "Shyam Sarkar Real Estate Pvt. Ltd. | Premium Property Solutions in Jhansi",
     template: "%s | Shyam Sarkar Real Estate",
@@ -48,17 +48,17 @@ export const metadata: Metadata = {
   },
   generator: "v0.app",
   icons: {
-    icon: "/real-estate-website/logo.png",
-    apple: "/real-estate-website/logo.png",
+    icon: "/logo.png",
+    apple: "/logo.png",
   },
   openGraph: {
     title: "Shyam Sarkar Real Estate Pvt. Ltd.",
     description: "Your trusted partner for all real estate needs in Jhansi and nearby areas.",
-    url: "https://debabrata013.github.io/real-estate-website",
+    url: "https://shyamsarkarrealestate.com",
     siteName: "Shyam Sarkar Real Estate",
     images: [
       {
-        url: "logo.png",
+        url: "logo.png", // Relative path works with metadataBase
         width: 800,
         height: 600,
         alt: "Shyam Sarkar Real Estate Logo",
@@ -91,7 +91,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "RealEstateAgent",
   name: "Shyam Sarkar Real Estate Pvt. Ltd.",
-  image: "https://debabrata013.github.io/real-estate-website/logo.png",
+  image: "https://shyamsarkarrealestate.com/logo.png",
   description:
     "Trusted real estate services in Jhansi - Property buying, selling, investment, residential & commercial properties.",
   address: {
@@ -107,7 +107,7 @@ const jsonLd = {
     latitude: 25.4484, // Approximate coords for Jhansi
     longitude: 78.5685,
   },
-  url: "https://debabrata013.github.io/real-estate-website",
+  url: "https://shyamsarkarrealestate.com",
   telephone: "+919876543210", // Placeholder
   openingHoursSpecification: [
     {

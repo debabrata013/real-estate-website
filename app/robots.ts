@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
             allow: "/",
             disallow: "/private/",
         },
-        sitemap: "https://debabrata013.github.io/real-estate-website/sitemap.xml",
+        sitemap: "https://shyamsarkarrealestate.com/sitemap.xml",
     }
 }
