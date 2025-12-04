@@ -99,7 +99,7 @@ export function ServicesSection() {
                   preload="metadata"
                   poster="/video1-thumbnail.jpg"
                 >
-                  <source src="/video1.mp4" type="video/mp4" />
+                  <source src="/real-estate-website/video1.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
@@ -120,7 +120,7 @@ export function ServicesSection() {
                   preload="metadata"
                   poster="/video2-thumbnail.jpg"
                 >
-                  <source src="/video2.mp4" type="video/mp4" />
+                  <source src="/real-estate-website/video2.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
