@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     siteName: "Shyam Sarkar Real Estate",
     images: [
       {
-        url: "/real-estate-website/logo.png",
+        url: "logo.png",
         width: 800,
         height: 600,
         alt: "Shyam Sarkar Real Estate Logo",
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Shyam Sarkar Real Estate Pvt. Ltd.",
     description: "Your trusted partner for all real estate needs in Jhansi and nearby areas.",
-    images: ["/real-estate-website/logo.png"],
+    images: ["logo.png"],
     creator: "@shyamsarkar", // Placeholder if not known
   },
   robots: {
