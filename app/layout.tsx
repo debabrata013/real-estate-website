@@ -17,34 +17,106 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Shyam Sarkar Real Estate Pvt. Ltd. | Premium Property Solutions in Jhansi",
+  metadataBase: new URL("https://debabrata013.github.io/real-estate-website"),
+  title: {
+    default: "Shyam Sarkar Real Estate Pvt. Ltd. | Premium Property Solutions in Jhansi",
+    template: "%s | Shyam Sarkar Real Estate",
+  },
   description:
     "Trusted real estate services in Jhansi - Property buying, selling, investment, residential & commercial properties, land deals, and rental services. Contact Ghanshyam Kushwaha for expert guidance.",
-  keywords:
-    "real estate jhansi, property jhansi, buy property jhansi, sell property jhansi, land plots jhansi, rental jhansi, commercial property jhansi",
+  keywords: [
+    "real estate jhansi",
+    "property jhansi",
+    "buy property jhansi",
+    "sell property jhansi",
+    "land plots jhansi",
+    "rental jhansi",
+    "commercial property jhansi",
+    "ghanshyam kushwaha",
+    "shyam sarkar real estate",
+  ],
+  authors: [{ name: "Ghanshyam Kushwaha" }],
+  creator: "Shyam Sarkar Real Estate Pvt. Ltd.",
+  publisher: "Shyam Sarkar Real Estate Pvt. Ltd.",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  alternates: {
+    canonical: "/",
+  },
   generator: "v0.app",
   icons: {
-    icon: [
-      {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
-      },
-    ],
-    apple: "/apple-icon.png",
+    icon: "/real-estate-website/logo.png",
+    apple: "/real-estate-website/logo.png",
   },
   openGraph: {
     title: "Shyam Sarkar Real Estate Pvt. Ltd.",
     description: "Your trusted partner for all real estate needs in Jhansi and nearby areas.",
+    url: "https://debabrata013.github.io/real-estate-website",
+    siteName: "Shyam Sarkar Real Estate",
+    images: [
+      {
+        url: "/real-estate-website/logo.png",
+        width: 800,
+        height: 600,
+        alt: "Shyam Sarkar Real Estate Logo",
+      },
+    ],
+    locale: "en_IN",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Shyam Sarkar Real Estate Pvt. Ltd.",
+    description: "Your trusted partner for all real estate needs in Jhansi and nearby areas.",
+    images: ["/real-estate-website/logo.png"],
+    creator: "@shyamsarkar", // Placeholder if not known
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+}
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "RealEstateAgent",
+  name: "Shyam Sarkar Real Estate Pvt. Ltd.",
+  image: "https://debabrata013.github.io/real-estate-website/logo.png",
+  description:
+    "Trusted real estate services in Jhansi - Property buying, selling, investment, residential & commercial properties.",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Near Medical College",
+    addressLocality: "Jhansi",
+    addressRegion: "Uttar Pradesh",
+    postalCode: "284001",
+    addressCountry: "IN",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 25.4484, // Approximate coords for Jhansi
+    longitude: 78.5685,
+  },
+  url: "https://debabrata013.github.io/real-estate-website",
+  telephone: "+919876543210", // Placeholder
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      opens: "09:00",
+      closes: "19:00",
+    },
+  ],
 }
 
 export const viewport = {
@@ -62,6 +134,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${playfair.variable} ${inter.variable} font-sans antialiased`}>
         {children}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <Analytics />
       </body>
     </html>
