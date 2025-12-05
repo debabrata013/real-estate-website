@@ -23,14 +23,13 @@ export const metadata: Metadata = {
     template: "%s | Shyam Sarkar Real Estate",
   },
   description:
-    "Trusted real estate services in Jhansi - Property buying, selling, investment, residential & commercial properties, land deals, and rental services. Contact Ghanshyam Kushwaha for expert guidance.",
+    "Trusted real estate services in Jhansi - Property buying, selling, investment, residential & commercial properties, land deals. Contact Ghanshyam Kushwaha for expert guidance.",
   keywords: [
     "real estate jhansi",
     "property jhansi",
     "buy property jhansi",
     "sell property jhansi",
     "land plots jhansi",
-    "rental jhansi",
     "commercial property jhansi",
     "ghanshyam kushwaha",
     "shyam sarkar real estate",

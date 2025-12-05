@@ -20,11 +20,6 @@ const services = [
     description: "Invest in premium land and plots in developing areas with high appreciation potential.",
   },
   {
-    icon: Key,
-    title: "Rental Services",
-    description: "Whether renting or leasing, we help you find the perfect property that fits your requirements.",
-  },
-  {
     icon: TrendingUp,
     title: "Investment Advisory",
     description: "Get expert guidance on property investments with high returns and secure documentation.",

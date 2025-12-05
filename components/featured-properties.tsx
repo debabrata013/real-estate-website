@@ -55,30 +55,6 @@ const properties = [
     area: "3200 sq.ft",
     image: "/luxury-villa-exterior-garden.jpg",
   },
-  {
-    id: 5,
-    title: "Office Space",
-    location: "Elite Chowk, Jhansi",
-    price: "₹25,000/month",
-    type: "Commercial",
-    status: "For Rent",
-    beds: 0,
-    baths: 2,
-    area: "1200 sq.ft",
-    image: "/modern-office-interior.png",
-  },
-  {
-    id: 6,
-    title: "2BHK Flat",
-    location: "Kanpur Road, Jhansi",
-    price: "₹12,000/month",
-    type: "Residential",
-    status: "For Rent",
-    beds: 2,
-    baths: 1,
-    area: "950 sq.ft",
-    image: "/cozy-apartment-bedroom-interior.jpg",
-  },
 ]
 
 export function FeaturedProperties() {
@@ -121,13 +97,7 @@ export function FeaturedProperties() {
                   <Badge className="bg-primary text-primary-foreground font-[family-name:var(--font-inter)]">
                     {property.type}
                   </Badge>
-                  <Badge
-                    className={
-                      property.status === "For Rent"
-                        ? "bg-secondary text-secondary-foreground font-[family-name:var(--font-inter)]"
-                        : "bg-green-600 text-white font-[family-name:var(--font-inter)]"
-                    }
-                  >
+                  <Badge className="bg-green-600 text-white font-[family-name:var(--font-inter)]">
                     {property.status}
                   </Badge>
                 </div>

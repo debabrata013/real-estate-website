@@ -75,7 +75,6 @@ export function InquiryForm() {
                   <SelectItem value="residential">Residential Property</SelectItem>
                   <SelectItem value="commercial">Commercial Property</SelectItem>
                   <SelectItem value="land">Land / Plot</SelectItem>
-                  <SelectItem value="rental">Rental Property</SelectItem>
                   <SelectItem value="sell">Want to Sell Property</SelectItem>
                   <SelectItem value="other">Other</SelectItem>
                 </SelectContent>
