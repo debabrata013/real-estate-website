@@ -18,7 +18,7 @@ export default function PropertiesPage() {
   const [propertyType, setPropertyType] = useState("all")
   const [propertyStatus, setPropertyStatus] = useState("all")
   const [sortBy, setSortBy] = useState("featured")
-  const [favorites, setFavorites] = useState<Set<string>>(new Set())
+  const [favorites, setFavorites] = useState<Set<number>>(new Set())
 
   const filteredProperties = useMemo(() => {
     let filtered = [...properties]
@@ -66,7 +66,7 @@ export default function PropertiesPage() {
 
   const phoneNumber = "917985206466"
 
-  const toggleFavorite = (id: string) => {
+  const toggleFavorite = (id: number) => {
     setFavorites((prev) => {
       const newFavorites = new Set(prev)
       if (newFavorites.has(id)) {
@@ -130,7 +130,7 @@ export default function PropertiesPage() {
                   <SelectContent>
                     <SelectItem value="all">All Status</SelectItem>
                     <SelectItem value="For Sale">For Sale</SelectItem>
-                    <SelectItem value="For Rent">For Rent</SelectItem>
+
                   </SelectContent>
                 </Select>
                 <Select value={sortBy} onValueChange={setSortBy}>
@@ -185,43 +185,36 @@ export default function PropertiesPage() {
                         priority={property.isFeatured}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                      
+
                       <div className="absolute top-3 left-3 flex gap-2 flex-wrap">
                         <Badge className="bg-primary/90 backdrop-blur-sm text-primary-foreground font-[family-name:var(--font-inter)] shadow-lg">
                           {property.type}
                         </Badge>
-                        <Badge
-                          className={
-                            property.status === "For Rent"
-                              ? "bg-secondary/90 backdrop-blur-sm text-secondary-foreground font-[family-name:var(--font-inter)] shadow-lg"
-                              : "bg-green-600/90 backdrop-blur-sm text-white font-[family-name:var(--font-inter)] shadow-lg"
-                          }
-                        >
+                        <Badge className="bg-green-600/90 backdrop-blur-sm text-white font-[family-name:var(--font-inter)] shadow-lg">
                           {property.status}
                         </Badge>
                       </div>
-                      
+
                       {property.isFeatured && (
                         <Badge className="absolute top-3 right-3 bg-secondary/90 backdrop-blur-sm text-secondary-foreground font-[family-name:var(--font-inter)] shadow-lg">
                           ⭐ Featured
                         </Badge>
                       )}
-                      
+
                       <button
                         onClick={() => toggleFavorite(property.id)}
                         className="absolute bottom-3 right-3 p-2 rounded-full bg-background/80 backdrop-blur-sm hover:bg-background transition-all duration-200 opacity-0 group-hover:opacity-100"
                         aria-label="Add to favorites"
                       >
                         <Heart
-                          className={`h-5 w-5 transition-colors ${
-                            favorites.has(property.id)
-                              ? "fill-red-500 text-red-500"
-                              : "text-muted-foreground"
-                          }`}
+                          className={`h-5 w-5 transition-colors ${favorites.has(property.id)
+                            ? "fill-red-500 text-red-500"
+                            : "text-muted-foreground"
+                            }`}
                         />
                       </button>
                     </div>
-                    
+
                     <CardContent className="p-5 space-y-4">
                       <div>
                         <div className="text-2xl font-bold text-primary mb-2 font-[family-name:var(--font-inter)]">
@@ -235,11 +228,11 @@ export default function PropertiesPage() {
                           <span className="line-clamp-1">{property.location}</span>
                         </div>
                       </div>
-                      
+
                       <p className="text-muted-foreground text-sm line-clamp-2 font-[family-name:var(--font-inter)] leading-relaxed">
                         {property.description}
                       </p>
-                      
+
                       <div className="flex items-center gap-4 text-muted-foreground text-sm border-t border-border pt-4 font-[family-name:var(--font-inter)]">
                         {property.beds > 0 && (
                           <div className="flex items-center gap-1.5">
@@ -258,7 +251,7 @@ export default function PropertiesPage() {
                           <span>{property.area}</span>
                         </div>
                       </div>
-                      
+
                       <div className="flex gap-2 pt-2">
                         <Button
                           asChild
